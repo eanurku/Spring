@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=com.anurag -DartifactId=SpringAop -DarchetypeartifactId=maven-archetype-quickstart -DinteractiveMode=false
