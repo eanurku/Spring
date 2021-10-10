@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.anurag</groupId>
-    <artifactId>SpringByBryan</artifactId>
+    <artifactId>SpringFundamentalsByBryan</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
   <groupId>com.anurag</groupId>
-  <artifactId>4_conference-app-java-config-full-autowiring</artifactId>
+  <artifactId>3_conference-app-java-config-hybrid-autowiring</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>4_conference-app-java-config-full-autowiring</name>
+  <name>3_conference-app-java-config-hybrid-autowiring</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
