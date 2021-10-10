@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="customerRepository" class="com.anurag.repository.HibernateCustomerRepositoryImpl">
+    </bean>
+    <bean id="employeeRepository" class="com.anurag.repository.HibernateEmployeeRepositoryImpl">
+    </bean>
+
+    <bean id="customerService" class="com.anurag.services.CustomerServiceImpl" autowire="constructor">
+    </bean>
+    <bean id="employeeService" class="com.anurag.services.EmployeeServiceImpl" autowire="byType">
+    </bean>
+
+    <bean id="commonService" class="com.anurag.services.CommonServiceImpl" autowire="byName">
+    </bean>
+
+</beans>

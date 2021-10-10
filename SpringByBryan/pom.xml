@@ -146,7 +146,8 @@
           
     
     <module>4_conference-app-java-config-full-autowiring</module>
-      
+      <module>5_customer-app-xml-config-autowiring</module>
+
   </modules>
         
 
