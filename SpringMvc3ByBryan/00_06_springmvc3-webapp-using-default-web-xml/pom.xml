@@ -9,10 +9,10 @@
   </parent>
 
   <groupId>com.anurag</groupId>
-  <artifactId>01_springmvc3-webapp-fitness-tracker</artifactId>
+  <artifactId>00_06_springmvc3-webapp-using-default-web-xml</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>01_springmvc3-webapp-fitness-tracker Maven Webapp</name>
+  <name>00_06_springmvc3-webapp-using-default-web-xml Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>
@@ -53,6 +53,6 @@
 
 
   <build>
-    <finalName>01_springmvc3-webapp-fitness-tracker</finalName>
+    <finalName>00_06_springmvc3-webapp-using-default-web-xml</finalName>
   </build>
 </project>

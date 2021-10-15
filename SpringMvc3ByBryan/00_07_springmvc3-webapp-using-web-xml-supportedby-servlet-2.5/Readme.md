@@ -33,7 +33,8 @@
    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 **
-3. web.xml 
+3. web.xml
+  -by default DispatcherServlet searches for [servlet name]-servlet.xml file for spring configurations.
   -if servlet name is fitnessTracker then web.xml by default look for fitnessTracker-servlet.xml file
    as per convention of [servlet name]-servlet.xml
  

@@ -170,9 +170,9 @@
     
     <module>00_04_springmvc3_webapp_multiaction_controller</module>
         
-    <module>01_springmvc3-webapp-fitness-tracker</module>
+    <module>00_06_springmvc3-webapp-using-default-web-xml</module>
         
-    <module>02_springmvc3-webapp-fitness-tracker</module>
+    <module>00_07_springmvc3-webapp-using-web-xml-supportedby-servlet-2.5</module>
         
     <module>00_05_springmvc3_webapp_using_pathvariable</module>
       
