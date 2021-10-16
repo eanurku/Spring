@@ -1,17 +1,16 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="01_springmvc3_webapp_fitness_tracker_war" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false">
-    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/01_springmvc3_webapp_fitness_tracker_war/" />
+  <configuration default="false" name="03_springmvc3_webapp_fitness_tracker_host_static_files_war" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.72" ALTERNATIVE_JRE_ENABLED="false">
     <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
-      <artifact name="01_springmvc3-webapp-fitness-tracker:war">
+      <artifact name="03_springmvc3-webapp-fitness-tracker-host-static-files:war">
         <settings>
-          <option name="CONTEXT_PATH" value="/01_springmvc3_webapp_fitness_tracker_war" />
+          <option name="CONTEXT_PATH" value="/03_springmvc3_webapp_fitness_tracker_host_static_files_war" />
         </settings>
       </artifact>
     </deployment>
     <server-settings>
-      <option name="BASE_DIRECTORY_NAME" value="d376a8e7-53de-42e7-9a95-dc66fdf865a0" />
+      <option name="BASE_DIRECTORY_NAME" value="e9bb5d0a-dda8-4798-a3a7-1387284a8b4e" />
     </server-settings>
     <predefined_log_file enabled="true" id="Tomcat" />
     <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -19,7 +18,7 @@
     <predefined_log_file id="Tomcat Host Manager" />
     <predefined_log_file id="Tomcat Localhost Access" />
     <RunnerSettings RunnerId="Debug">
-      <option name="DEBUG_PORT" value="53025" />
+      <option name="DEBUG_PORT" value="53745" />
     </RunnerSettings>
     <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
       <option name="USE_ENV_VARIABLES" value="true" />
@@ -84,7 +83,7 @@
     <method v="2">
       <option name="Make" enabled="true" />
       <option name="BuildArtifacts" enabled="true">
-        <artifact name="01_springmvc3-webapp-fitness-tracker:war" />
+        <artifact name="03_springmvc3-webapp-fitness-tracker-host-static-files:war" />
       </option>
     </method>
   </configuration>
