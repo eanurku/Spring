@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-                              
+                                  
+  
+  
   
   
   
@@ -15,7 +17,9 @@
   
   
   <modelVersion>4.0.0</modelVersion>
-                              
+                                  
+  
+  
   
   
   
@@ -30,7 +34,9 @@
   
   
   <parent>
-                                                            
+                                                                    
+    
+    
     
     
     
@@ -45,7 +51,9 @@
     
     
     <groupId>com.anurag</groupId>
-                                                            
+                                                                    
+    
+    
     
     
     
@@ -60,7 +68,9 @@
     
     
     <artifactId>Spring</artifactId>
-                                                            
+                                                                    
+    
+    
     
     
     
@@ -75,7 +85,9 @@
     
     
     <version>1.0-SNAPSHOT</version>
-                                                          
+                                                                  
+  
+  
   
   
   
@@ -90,7 +102,9 @@
   
   
   </parent>
-                              
+                                  
+  
+  
   
   
   
@@ -105,7 +119,9 @@
   
   
   <groupId>com.anurag</groupId>
-                              
+                                  
+  
+  
   
   
   
@@ -120,7 +136,9 @@
   
   
   <artifactId>SpringMvc3ByBryan</artifactId>
-                              
+                                  
+  
+  
   
   
   
@@ -135,7 +153,9 @@
   
   
   <version>1.0-SNAPSHOT</version>
-                              
+                                  
+  
+  
   
   
   
@@ -150,7 +170,9 @@
   
   
   <name>SpringMvc3ByBryan</name>
-                              
+                                  
+  
+  
   
   
   
@@ -165,7 +187,9 @@
   
   
   <packaging>pom</packaging>
-                              
+                                  
+  
+  
   
   
   
@@ -180,7 +204,9 @@
   
   
   <url>http://maven.apache.org</url>
-                            
+                                
+  
+  
   
   
   
@@ -195,7 +221,9 @@
   
   <dependencies>
   </dependencies>
-                            
+                                
+  
+  
   
   
   
@@ -210,21 +238,27 @@
   
   
   <modules>
-                                                          
+                                                                  
 
     
     
     
     
     
+    
+    
     <module>00_01_springmvc3-webapp-single-page-html</module>
-                        
+                                
+    
+    
     
     
     
     
     <module>00_02_springmvc3_webapp_abstract_controller</module>
-                                  
+                                          
+    
+    
     
     
     
@@ -233,7 +267,9 @@
     
     
     <module>00_03_springmvc3_webapp__using_controller_annotation</module>
-                              
+                                      
+    
+    
     
     
     
@@ -241,49 +277,74 @@
     
     
     <module>00_04_springmvc3_webapp_multiaction_controller</module>
-                        
+                                
+    
+    
     
     
     
     
     <module>00_06_springmvc3-webapp-using-default-web-xml</module>
-                        
+                                
+    
+    
     
     
     
     
     <module>00_07_springmvc3-webapp-using-web-xml-supportedby-servlet-2.5</module>
-                        
+                                
+    
+    
     
     
     
     
     <module>00_05_springmvc3_webapp_using_pathvariable</module>
-                      
+                              
+    
+    
     
     
     
     
     <module>01_springmvc3-webapp-fitness-tracker</module>
-                
+                        
+    
+    
     
     
     <module>02_springmvc3-webapp-fitness-tracker-forward-and-redirect</module>
-                  
+                          
+    
+    
     
     
     
     <module>03_springmvc3-webapp-fitness-tracker-host-static-files</module>
-              
+                      
+    
+    
     
     
     <module>04_springmvc3-webapp-fitness-tracker-spring-message-tag</module>
-          
+                  
+    
+    
     
     <module>05_springmvc3-webapp-fitness-tracker--multiple-languages-support</module>
+              
+    
+    
+    <module>06_springmvc3-webapp-fitness-tracker-forms-add-default-values</module>
+          
+    
+    <module>07_springmvc3-webapp-fitness-tracker-store-in-session</module>
       
   </modules>
-                          
+                              
+
+
 
 
 
