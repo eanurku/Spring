@@ -8,6 +8,8 @@
     <title>Title</title>
 </head>
 <body>
+<a href="?language=en">English</a>|<a href="?language=es">Spanish</a>|<a href="https://www.youtube.com/">youtube</a>
+
 <h1>Add Minutes </h1>
 <form:form commandName="exercise" >
     <table>

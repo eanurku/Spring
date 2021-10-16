@@ -27,4 +27,18 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
         <property name="basename" value="messages"/>
     </bean>
 
+
+    <!--    supporting multiple language-->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="en"/>
+    </bean>
+
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" >
+            <property name="paramName" value="language"/>
+        </bean>
+    </mvc:interceptors>
+
+    <!--    supporting multiple language-->
+
 </beans>

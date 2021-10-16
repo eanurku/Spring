@@ -8,10 +8,10 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <groupId>com.anurag</groupId>
-  <artifactId>04_springmvc3-webapp-fitness-tracker-spring-message-tag</artifactId>
+  <artifactId>05_springmvc3-webapp-fitness-tracker--multiple-languages-support</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>04_springmvc3-webapp-fitness-tracker-spring-message-tag Maven Webapp</name>
+  <name>05_springmvc3-webapp-fitness-tracker--multiple-languages-support Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -33,6 +33,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>04_springmvc3-webapp-fitness-tracker-spring-message-tag</finalName>
+    <finalName>05_springmvc3-webapp-fitness-tracker--multiple-languages-support</finalName>
   </build>
 </project>
