@@ -13,6 +13,12 @@
   <packaging>war</packaging>
   <name>08_springmvc3-webapp-fitness-tracker-spring-form-validation Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework</groupId>

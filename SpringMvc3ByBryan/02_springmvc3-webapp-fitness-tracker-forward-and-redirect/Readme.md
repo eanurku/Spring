@@ -1,4 +1,11 @@
-1.forward:
+1.   spring 3.2.0.RELEASE will be supported in jdk7 but not after that
+     `<properties>
+     <maven.compiler.source>1.7</maven.compiler.source>
+     <maven.compiler.target>1.7</maven.compiler.target>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     </properties>`
+2. use jdk 1.7 to compile and build project .
+3. forward:
 -it redirect to another @controller handler method but keep the request URL as same.
 -request body  will be same.
 2.redirect

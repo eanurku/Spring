@@ -1,4 +1,11 @@
-1. add hibernate-validator dependency:
+1.   spring 3.2.0.RELEASE will be supported in jdk7 but not after that
+     `<properties>
+     <maven.compiler.source>1.7</maven.compiler.source>
+     <maven.compiler.target>1.7</maven.compiler.target>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     </properties>`
+2. use jdk 1.7 to compile and build project .
+3. add hibernate-validator dependency:
 `   
    <dependency>
    <groupId>org.hibernate</groupId>
@@ -6,7 +13,7 @@
    <version>4.2.0.Final</version>
    </dependency>
 `
-2. add @valid ,BindingResult in controller method
+4. add @valid ,BindingResult in controller method
 `  
    @RequestMapping(value = "/addGoal",method = RequestMethod.POST)
    public String submitGoal(@Valid @ModelAttribute("goal") Goal goal, BindingResult result){
@@ -19,10 +26,10 @@
         return "redirect:addMinutes";
    }
 `
-3. add @Range annotations in Goal Class which is mapped to form
+5. add @Range annotations in Goal Class which is mapped to form
 `@Range(min = 1, max = 1000)`
 
-4. use spring <form:errors> tag 
+6. use spring <form:errors> tag 
 - add <form:errors> for all fields in Goal Object
 `  <form:errors path="*" cssClass="commonErrorBlock" element="div"/>`
 
