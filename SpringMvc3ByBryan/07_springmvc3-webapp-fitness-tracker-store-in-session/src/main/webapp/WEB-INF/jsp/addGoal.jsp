@@ -21,5 +21,7 @@
     </table>
 
 </form:form>
+<%--fetch from session --%>
+<h1>my current goal:${goal.minutes}</h1>
 </body>
 </html>
