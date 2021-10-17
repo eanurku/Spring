@@ -7,8 +7,7 @@
 2. add properties files in classpath (src/main/resources recommended):
 -messages.properties
  -goal.text=total minutes exercised today coming from messages.properties
-3. 
-4. add bean with exact name as "messageSource"
+3.add bean with exact name as "messageSource"
 ` 
 <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
    <property name="basename" value="messages"/>

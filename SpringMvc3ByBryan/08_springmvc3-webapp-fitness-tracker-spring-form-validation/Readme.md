@@ -19,12 +19,17 @@
         return "redirect:addMinutes";
    }
 `
-3. use spring <form:errors> tag 
+3. add @Range annotations in Goal Class which is mapped to form
+`@Range(min = 1, max = 1000)`
+
+4. use spring <form:errors> tag 
 - add <form:errors> for all fields in Goal Object
 `  <form:errors path="*" cssClass="commonErrorBlock" element="div"/>`
+
 - add  <form:errors> for specific field in Goal Object
 `<td><form:errors path="minutes" cssClass="error"/></td>`
-- use  cssErrorClass of <form:input> to show effect if error happens.
+
+- use  cssErrorClass of <form:input> to show effect inside form element if error happens.
 ` <td><form:input path="minutes" cssErrorClass="errorBox"/></td>`
 
 - form example:

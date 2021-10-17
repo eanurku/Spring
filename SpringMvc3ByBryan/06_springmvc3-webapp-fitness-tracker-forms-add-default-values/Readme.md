@@ -4,7 +4,7 @@
    @RequestMapping(value = "/addGoal",method = RequestMethod.GET)
    public String addGoal(Model model){
    Goal goal=new Goal();
-   goal.setMinutes(100);
+   goal.setMinutes(100);//setting default value for form
    model.addAttribute("goal",goal);
    return "addGoal";
    }
