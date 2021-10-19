@@ -4,8 +4,7 @@
    <maven.compiler.target>1.7</maven.compiler.target>
    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>`
-2. use jdk 1.7 to create war.
-
-
-3. goal attribute is present in Model Object
-4. add @SessionAttributes("goal") on GoalController to keep goal attribute of Model in session storage. 
+2. use jdk 1.7 to create war. 
+3. create Controller tier
+4. create Services tier
+5. create Repository tier
