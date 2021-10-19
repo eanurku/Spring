@@ -24,4 +24,4 @@
 <version>${spring-version}</version>
 </dependency>
 `
-4. 
+4. add ContentNegotiatingViewResolver bean to resolve rest controller related views.

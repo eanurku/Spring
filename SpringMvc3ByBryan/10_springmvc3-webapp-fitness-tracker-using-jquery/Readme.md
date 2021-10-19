@@ -5,6 +5,7 @@
    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>`
 2. use jdk 1.7 to create war.
+
 3. add jquery-1.8.3.js in webapp or root directory
 4. make jquery-1.8.3.js publicly accessible
 `<mvc:resources mapping="/*.js" location="/"/>`
