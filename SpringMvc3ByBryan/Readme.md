@@ -1,4 +1,4 @@
-1. maven dependency:
+1. maven dependency for mvc 3 webapp:
    -spring mvc 3.1.2.RELEASE
    -servlet-api 2.5 provided
    -jstl 1.2 provided
@@ -75,3 +75,59 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    </init-param>
    </servlet>`
 **
+5. maven dependency for MVC 3 webapp (supporting validation,REST web services):
+   -spring mvc 3.1.2.RELEASE
+   -servlet-api 2.5 provided
+   -jstl 1.2 provided
+   <properties>
+   <maven.compiler.source>1.7</maven.compiler.source>
+   <maven.compiler.target>1.7</maven.compiler.target>
+   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   <spring-version>3.2.0.RELEASE</spring-version>
+   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>4.2.0.Final</version>
+    </dependency>
+
+
+
+
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-oxm</artifactId>
+      <version>${spring-version}</version>
+    </dependency>
+
+  </dependencies>
