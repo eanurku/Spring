@@ -13,5 +13,4 @@ public class HelloController {
         model.addAttribute("greeting","Welcome to Mvc 4");
         return "welcome";
     }
-
 }
