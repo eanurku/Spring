@@ -1,49 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-      
-  <modelVersion>4.0.0</modelVersion>
-      
-  <parent>
-            
-    <groupId>com.anurag</groupId>
-            
-    <artifactId>Spring</artifactId>
-            
-    <version>1.0-SNAPSHOT</version>
         
+  
+  <modelVersion>4.0.0</modelVersion>
+        
+  
+  <parent>
+                
+    
+    <groupId>com.anurag</groupId>
+                
+    
+    <artifactId>Spring</artifactId>
+                
+    
+    <version>1.0-SNAPSHOT</version>
+            
+  
   </parent>
-      
+        
+  
   <groupId>com.anurag</groupId>
-      
+        
+  
   <artifactId>SpringMvc4ByBryan</artifactId>
-      
+        
+  
   <version>1.0-SNAPSHOT</version>
-      
+        
+  
   <packaging>pom</packaging>
-      
+        
+  
   <name>SpringMvc4ByBryan</name>
-      
+        
+  
   <url>http://maven.apache.org</url>
-      
+        
+  
   <dependencies>
     </dependencies>
-      
+        
+  
   <modules>
-            
+                
+    
     <module>01_springmvc4-webapp-fitness-tracker-upgrade-to-spring-4.x</module>
-            
+                
+    
     <module>02_springmvc4-webapp-event-tracker-upgrade-to-spring-4.x-using-spring-boot</module>
-            
+                
+    
     <module>03_springmvc4-webapp-event-tracker-dispatcher-servlet-by-java-config-using-web.xml</module>
-            
+                
+    
     <module>04_springmvc4-webapp-event-tracker-dispatcher-servlet-by-java-config-without-web.xml</module>
-            
+                
+    
     <module>05_springmvc4-webapp-event-tracker-return-unsecured-views</module>
-            
+                
+    
     <module>06_springmvc4-webapp-event-tracker-internal-resource-view-resolver</module>
-          
+              
+    
     <module>07_springmvc4-webapp-event-tracker-base</module>
+          
+    
+    <module>08_springmvc4-webapp-event-tracker-host-static-resources</module>
       
   </modules>
-  
+    
+
 </project>
