@@ -34,7 +34,6 @@
     <form:errors path="email" cssClass="error"/>
     <br/>
     <input type="submit" value="Submit Form">
-
 </form:form>
 
 </body>
