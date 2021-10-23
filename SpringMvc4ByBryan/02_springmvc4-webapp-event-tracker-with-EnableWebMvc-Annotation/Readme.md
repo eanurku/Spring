@@ -28,8 +28,8 @@
     </dependencies>
 `
 
-3. @EnableWebMvc enables a java class to be  equaivalent to spring app-context.xml config
-4. configuring a webapp using @Configuration,@EnableWebMvc  as alternative to using web.xml
+3. @EnableWebMvc enables a java class to be  equivalent to spring app-context.xml config
+4. configuring a webapp using @Configuration,@EnableWebMvc  as alternative to using app-context.xml
 `
 @Configuration
 @EnableWebMvc

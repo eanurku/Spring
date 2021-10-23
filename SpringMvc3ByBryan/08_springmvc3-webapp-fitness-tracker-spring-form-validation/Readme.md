@@ -57,7 +57,25 @@
         </tr>
     </table>
 </form:form>`
+-css classes
 
+`
+<style>
+     .error{
+        color: red;
+     }
+     .commonErrorBlock{
+        color: black;
+        border: solid red 3px;
+        margin: 16px;
+        padding: 10px;
+     }
+     .errorBox{
+        color: red;
+        border: red solid 3px;
+     }
+</style>
+`
 4. add custom message in messages properties files for @Range validation over goal object
 -messages.properties
  -Range.goal.minutes=Goal must be between {2} and  {1}

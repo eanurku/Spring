@@ -9,10 +9,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.anurag</groupId>
-    <artifactId>01_springmvc4-webapp-fitness-tracker</artifactId>
+    <artifactId>01_springmvc4-webapp-fitness-tracker-upgrade-to-spring-4.x</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>01_springmvc4-webapp-fitness-tracker</name>
+    <name>01_springmvc4-webapp-fitness-tracker-upgrade-to-spring-4.x</name>
     <url>http://maven.apache.org</url>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -67,6 +67,6 @@
 
     </dependencies>
     <build>
-        <finalName>01_springmvc4-webapp-fitness-tracker</finalName>
+        <finalName>01_springmvc4-webapp-fitness-tracker-upgrade-to-spring-4.x</finalName>
     </build>
 </project>

@@ -31,7 +31,9 @@
 **
 - if web.xml have above namespace then EL is disabled by default 
 - enable EL by spring tag lib  in jsp files
-   **<%@page isELIgnored="false" %>**
+**
+<%@page isELIgnored="false" %>
+**
 
 3. explicit loading of spring servlet config:
 **

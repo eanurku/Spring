@@ -25,7 +25,7 @@
                     function (data) {
                     console.log(data);
                         var len = data.length;
-                        var html = '<option value="">--select any one-- </option>'
+                        var html = '<option value="">--select any one-- </option>';
                         for (var i = 0; i < len; i++) {
                             html += '<option value="' + data[i].name + '">' + data[i].name + '</option>';
                         }

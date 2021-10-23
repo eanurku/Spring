@@ -1,16 +1,17 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="01_springmvc4_webapp_fitness_tracker_war" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.72" ALTERNATIVE_JRE_ENABLED="false">
-    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/01_springmvc4_webapp_fitness_tracker_war/" />
+  <configuration default="false" name="01_springmvc4_webapp_fitness_tracker_upgrade_to_spring_4_x_war" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.72" ALTERNATIVE_JRE_ENABLED="false">
+    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/01_springmvc4_webapp_fitness_tracker_upgrade_to_spring_4_x_war/" />
+    <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
-      <artifact name="01_springmvc4-webapp-fitness-tracker:war">
+      <artifact name="01_springmvc4-webapp-fitness-tracker-upgrade-to-spring-4.x:war">
         <settings>
-          <option name="CONTEXT_PATH" value="/01_springmvc4_webapp_fitness_tracker_war" />
+          <option name="CONTEXT_PATH" value="/01_springmvc4_webapp_fitness_tracker_upgrade_to_spring_4_x_war" />
         </settings>
       </artifact>
     </deployment>
     <server-settings>
-      <option name="BASE_DIRECTORY_NAME" value="70cd87ac-ab38-49a7-8c0e-f920593fdfdf" />
+      <option name="BASE_DIRECTORY_NAME" value="302e18e5-2c2d-464f-8ba1-f1222110e204" />
     </server-settings>
     <predefined_log_file enabled="true" id="Tomcat" />
     <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -18,7 +19,7 @@
     <predefined_log_file id="Tomcat Host Manager" />
     <predefined_log_file id="Tomcat Localhost Access" />
     <RunnerSettings RunnerId="Debug">
-      <option name="DEBUG_PORT" value="54292" />
+      <option name="DEBUG_PORT" value="61779" />
     </RunnerSettings>
     <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
       <option name="USE_ENV_VARIABLES" value="true" />
@@ -83,7 +84,7 @@
     <method v="2">
       <option name="Make" enabled="true" />
       <option name="BuildArtifacts" enabled="true">
-        <artifact name="01_springmvc4-webapp-fitness-tracker:war" />
+        <artifact name="01_springmvc4-webapp-fitness-tracker-upgrade-to-spring-4.x:war" />
       </option>
     </method>
   </configuration>
