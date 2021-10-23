@@ -1,9 +1,14 @@
-1. maven dependencies:
-   -spring-boot-starter-parent: 1.0.2.RELEASE
-   -spring-boot-starter-web
-   -spring-boot-starter-test
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
 
-`
+  <groupId>com.anurag</groupId>
+  <artifactId>10_springmvc4-webapp-event-tracker-redirect-and-forward</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>10_springmvc4-webapp-event-tracker-redirect-and-forward Maven Webapp</name>
+  <url>http://maven.apache.org</url>
   <properties>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
@@ -26,14 +31,7 @@
       <artifactId>spring-boot-starter-test</artifactId>
     </dependency>
   </dependencies>
-`
-
-3. @EnableWebMvc enables a java class to be  equaivalent to spring app-context.xml config
-4. configuring a webapp using @Configuration,@EnableWebMvc  as alternative to using web.xml
-   `
-   @Configuration
-   @EnableWebMvc
-   @ComponentScan(basePackages = "com.anurag")
-   public class WebConfig {
-   }
-   `
+  <build>
+    <finalName>10_springmvc4-webapp-event-tracker-redirect-and-forward</finalName>
+  </build>
+</project>
