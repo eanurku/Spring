@@ -33,21 +33,44 @@
     </dependencies>
 `
 
-2. add hibernate-validator maven dependency
--hibernate-validator 
-`<dependency>
-<groupId>org.hibernate</groupId>
-<artifactId>hibernate-validator</artifactId>
-<version>5.0.3.Final</version>
-</dependency>`
--validation-api of javax.validation 
- -transitive dependency of hibernate-validator 
- -so automatically pulled
-3. uses @valid ,BindingResult class 
-4. use spring <form:errors> tags to  show errors on jsp page
-5. if language change interceptor is active then
-- based on language attribute value in url hibernate provide internationalization support 
-  for that validator annotation.
-- hibernate will show error message of related annotation in particular language 
-- example for @Size annotation,if language=es ,then spanish error message for @Size is 
-  provided by hibernate-validator libaray.same is fetched by spring and shown on jsp page.
+2. create a  @Phone annotation using @interface
+   
+`  
+   @Documented
+   @Constraint(validatedBy = PhoneConstraintValidator.class)
+   @Target({ElementType.METHOD, ElementType.FIELD})
+   @Retention(RetentionPolicy.RUNTIME)
+   public @interface Phone {
+      String message() default "{Phone}";
+      Class<?>[] groups() default {};
+      Class<? extends Payload>[] payload() default {};
+   }
+`
+
+4. create a PhoneConstraintValidator class which implements ConstraintValidator<Phone, String>
+
+`
+public class PhoneConstraintValidator implements ConstraintValidator<Phone, String> {
+    @Override
+    public void initialize(Phone phone) {
+    }
+    @Override
+    public boolean isValid(String phoneValue, ConstraintValidatorContext constraintValidatorContext) {
+        if (phoneValue == null) {
+            return false;
+        }
+        return phoneValue.matches("[0-9]*");
+    }
+}
+`
+5. now apply @Phone annotation to validate a field
+`   
+   @NotEmpty
+   @Phone
+   private String phoneNumber;
+`
+6. add custom error message for @Phone annotation in message properties files.
+-messages.properties
+    -Phone=not a valid phone number
+-messages_es.properties
+   -Phone=no es un número de teléfono válido    

@@ -33,21 +33,21 @@
     </dependencies>
 `
 
-2. add hibernate-validator maven dependency
--hibernate-validator 
-`<dependency>
-<groupId>org.hibernate</groupId>
-<artifactId>hibernate-validator</artifactId>
-<version>5.0.3.Final</version>
-</dependency>`
--validation-api of javax.validation 
- -transitive dependency of hibernate-validator 
- -so automatically pulled
-3. uses @valid ,BindingResult class 
-4. use spring <form:errors> tags to  show errors on jsp page
-5. if language change interceptor is active then
-- based on language attribute value in url hibernate provide internationalization support 
-  for that validator annotation.
-- hibernate will show error message of related annotation in particular language 
-- example for @Size annotation,if language=es ,then spanish error message for @Size is 
-  provided by hibernate-validator libaray.same is fetched by spring and shown on jsp page.
+2. hibernate validator annotations types
+-@Size
+ -it supports mulriple error message for different  Model object
+ e.g:
+ Size.event.name=XXXX
+ Size.attendee.name=YYYYY
+-@Email,@NotEmpty
+ -they do not support multiple error message but only one for annotation only.
+
+3. add custom error message for hibernate validator annotation in message properties files.
+-messages.properties
+   -Size.attendee.name=name size must be between {2} to {1}
+   -Email=Email is not valid
+   -NotEmpty= Field must not be empty
+-messages_es.properties
+   -Size.attendee.name=el tamaño del nombre en español debe estar entre {2} y {1}
+   -Email=El correo no es válido
+   -NotEmpty=El campo no debe estar vacío
