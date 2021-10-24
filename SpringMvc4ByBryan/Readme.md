@@ -45,7 +45,7 @@
 `
 
 3. @EnableWebMvc enables a java class to be  equaivalent to spring app-context.xml config
-4. configuring a webapp using @Configuration,@EnableWebMvc  as alternative to using web.xml
+4. configuring a webapp using @Configuration,@EnableWebMvc  as alternative to using spring app-context.xml config
    `
    @Configuration
    @EnableWebMvc
@@ -53,3 +53,40 @@
    public class WebConfig {
    }
    `
+5. configure webapp using WebApplicationInitializer as alternative to web.xml
+
+`
+public class WebAppInitializer implements WebApplicationInitializer {
+   @Override
+   public void onStartup(ServletContext servletContext) throws ServletException {
+        WebApplicationContext appContext = getContext();
+        servletContext.addListener(new ContextLoaderListener(appContext));
+        ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcherServlet", new DispatcherServlet(appContext));
+        dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping("/");
+   }
+   private WebApplicationContext getContext() {
+   AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
+   appContext.setConfigLocation("com.anurag.WebConfig");
+   return appContext;
+   }
+}`
+
+6. hosting static resource by overriding addResourceHandlers() method of  WebMvcConfigurerAdapter class 
+`   
+   @Configuration
+   @EnableWebMvc
+   @ComponentScan(basePackages = "com.anurag")
+   public class WebConfig extends WebMvcConfigurerAdapter {
+      @Bean
+      public InternalResourceViewResolver getInternalResourceViewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+      }
+      @Override
+      public void addResourceHandlers(ResourceHandlerRegistry registry) {
+       registry.addResourceHandler("/pdfs/**").addResourceLocations("/WEB-INF/pdfs/");
+      }
+   }`
