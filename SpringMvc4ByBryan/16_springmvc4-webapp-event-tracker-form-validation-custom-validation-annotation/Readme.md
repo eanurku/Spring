@@ -71,6 +71,6 @@ public class PhoneConstraintValidator implements ConstraintValidator<Phone, Stri
 `
 6. add custom error message for @Phone annotation in message properties files.
 -messages.properties
-    -Phone=not a valid phone number
+    -Phone.attendee.phoneNumber=not a valid phone number
 -messages_es.properties
-   -Phone=no es un número de teléfono válido    
+   -Phone.attendee.phoneNumber=no es un número de teléfono válido    
