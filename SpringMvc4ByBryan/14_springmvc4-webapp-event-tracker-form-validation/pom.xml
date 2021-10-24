@@ -1,17 +1,14 @@
-1. use this properties for jdk source and target:
-   `<properties>
-   <maven.compiler.source>1.7</maven.compiler.source>
-   <maven.compiler.target>1.7</maven.compiler.target>
-   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-   </properties>`
-2. use jdk 1.7 to create war.
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
 
-3. maven dependencies:
-   -spring-boot-starter-parent: 1.0.2.RELEASE
-   -spring-boot-starter-web
-   -spring-boot-starter-test
-
-`  
+  <groupId>com.anurag</groupId>
+  <artifactId>14_springmvc4-webapp-event-tracker-form-validation</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>14_springmvc4-webapp-event-tracker-form-validation Maven Webapp</name>
+  <url>http://maven.apache.org</url>
   <properties>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
@@ -33,6 +30,7 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
     <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
     <dependency>
@@ -41,14 +39,8 @@
       <version>5.0.3.Final</version>
     </dependency>
   </dependencies>
-`
 
-3. @EnableWebMvc enables a java class to be  equaivalent to spring app-context.xml config
-4. configuring a webapp using @Configuration,@EnableWebMvc  as alternative to using web.xml
-   `
-   @Configuration
-   @EnableWebMvc
-   @ComponentScan(basePackages = "com.anurag")
-   public class WebConfig {
-   }
-   `
+  <build>
+    <finalName>14_springmvc4-webapp-event-tracker-form-validation</finalName>
+  </build>
+</project>
