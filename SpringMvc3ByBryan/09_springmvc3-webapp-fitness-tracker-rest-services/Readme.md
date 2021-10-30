@@ -25,3 +25,5 @@
 </dependency>
 `
 4. add ContentNegotiatingViewResolver bean to resolve rest controller related views.
+5. use @ResponseBody in @Controller mathods return type,
+   as this tells spring that response has body and its not a view name

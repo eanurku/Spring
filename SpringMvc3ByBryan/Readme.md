@@ -87,6 +87,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    -spring mvc 3.1.2.RELEASE
    -servlet-api 2.5 provided
    -jstl 1.2 provided
+**
    <properties>
    <maven.compiler.source>1.7</maven.compiler.source>
    <maven.compiler.target>1.7</maven.compiler.target>
@@ -119,9 +120,6 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
       <version>4.2.0.Final</version>
     </dependency>
 
-
-
-
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-mapper-asl</artifactId>
@@ -139,3 +137,4 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     </dependency>
 
   </dependencies>
+**
