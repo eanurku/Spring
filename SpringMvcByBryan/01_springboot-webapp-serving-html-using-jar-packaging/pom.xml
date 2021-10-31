@@ -20,6 +20,9 @@
     <name>01_springboot-webapp-serving-html-using-jar-packaging</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <java.version>11</java.version>
+    </properties>
 
     <dependencies>
         <dependency>

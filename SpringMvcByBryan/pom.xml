@@ -1,53 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-
-    <modelVersion>4.0.0</modelVersion>
-
-
-    <parent>
-
-
-        <groupId>com.anurag</groupId>
-
-
-        <artifactId>Spring</artifactId>
-
-
-        <version>1.0-SNAPSHOT</version>
-
-
-    </parent>
-
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+      
+  <modelVersion>4.0.0</modelVersion>
+      
+  <parent>
+            
     <groupId>com.anurag</groupId>
-
-
-    <artifactId>SpringMvcByBryan</artifactId>
-
-
+            
+    <artifactId>Spring</artifactId>
+            
     <version>1.0-SNAPSHOT</version>
-
-
-    <packaging>pom</packaging>
-
-
-    <name>SpringMvcByBryan</name>
-
-
-    <url>http://maven.apache.org</url>
-
-
-    <modules>
-
-        <module>01_springboot-webapp-serving-html-using-jar-packaging</module>
-
-
-        <module>2_spring-webapp-serving-jsp</module>
-
-
-    </modules>
-
-
+        
+  </parent>
+      
+  <groupId>com.anurag</groupId>
+      
+  <artifactId>SpringMvcByBryan</artifactId>
+      
+  <version>1.0-SNAPSHOT</version>
+      
+  <packaging>pom</packaging>
+      
+  <name>SpringMvcByBryan</name>
+      
+  <url>http://maven.apache.org</url>
+      
+  <modules>
+            
+    <module>01_springboot-webapp-serving-html-using-jar-packaging</module>
+            
+    <module>02_springboot-webapp-serving-html-using-war-packaging</module>
+          
+    <module>03_springboot-webapp-serving-jsp-using-standalone-tomcat</module>
+      
+  </modules>
+  
 </project>
