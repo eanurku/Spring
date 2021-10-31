@@ -1,4 +1,3 @@
-<%@ page import="com.anurag.models.Event" %>
 <html>
 <body>
 <h1>Hello ${event.eventName} !!!</h1>

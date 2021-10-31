@@ -90,3 +90,10 @@ public class WebAppInitializer implements WebApplicationInitializer {
        registry.addResourceHandler("/pdfs/**").addResourceLocations("/WEB-INF/pdfs/");
       }
    }`
+7. important keywords,annotations,tags
+- @Configuration
+- @EnableWebMvc
+- @ComponentScan(basePackages = "com.anurag")
+- WebApplicationInitializer interface
+- WebMvcConfigurerAdapter abstract class
+- @RestController

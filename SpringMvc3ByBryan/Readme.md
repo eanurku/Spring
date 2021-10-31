@@ -138,3 +138,15 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
   </dependencies>
 **
+6. important keywords,tags,annotations
+- `<mvc:annotation-driven/>`
+- `<context:component-scan base-package="com.anurag"/>`
+- `<mvc:resources mapping="/pdfs/**" location="/pdfs/"/>`
+- `<mvc:resources mapping="/*.js" location="/"/>`
+- `@ResponseBody`
+- `<spring:message code="goal.text"/>`
+- `<form:form commandName="exercise" > ....</form:form>`
+- `@SessionAttributes("goal")`
+- `"redirect:addMoreMinutes"`
+- `"forward:addMoreMinutes"`
+
