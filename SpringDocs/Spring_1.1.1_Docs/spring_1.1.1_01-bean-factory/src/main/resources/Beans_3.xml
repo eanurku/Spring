@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="student" class="com.anurag.factorybeans.Student">
+
+    </bean>
+    <!--    bean creation by instance factory method with parameters-->
+    <bean id="dept" factory-bean="student" factory-method="getDepartmentByInstanceMethod">
+        <constructor-arg value="my dept name 3"/>
+    </bean>
+
+
+
+</beans>

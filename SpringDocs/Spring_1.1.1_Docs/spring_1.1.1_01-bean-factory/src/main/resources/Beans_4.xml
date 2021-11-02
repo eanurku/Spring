@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+    <bean id="studentbean" class="com.anurag.beanfactoryaware.Student">
+        <constructor-arg value="anu"/>
+        <constructor-arg value="123"/>
+    </bean>
+
+    <bean id="dept" class="com.anurag.beanfactoryaware.Department">
+        <constructor-arg value="my dept name is 1"/>
+
+    </bean>
+
+
+</beans>

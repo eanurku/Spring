@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="student" class="com.anurag.quartz.Student">
+        <constructor-arg value="123"/>
+        <constructor-arg value="anu"/>
+    </bean>
+
+    <!--    Quartz job-->
+
+    <!--    job details bean-->
+    <bean id="expmpleJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass">
+            <value>com.anurag.quartz.ExampleJob</value>
+        </property>
+
+        <property name="jobDataMap">
+            <map>
+                <entry key="timeout">
+                    <value>5</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="methodInvokingJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+
+        <property name="targetObject">
+            <ref bean="exampleBusinessObject"/>
+        </property>
+        <property name="targetMethod">
+            <value>doIt</value>
+        </property>
+    </bean>
+
+    <bean id="exampleBusinessObject" class="com.anurag.quartz.BusinessObject"/>
+    <!--    job details bean end-->
+
+    <!--    triggers-->
+    <bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="methodInvokingJobDetail"/>
+        </property>
+        <property name="startDelay">
+            <value>1</value>
+        </property>
+        <property name="repeatInterval">
+            <value>10</value>
+        </property>
+    </bean>
+
+    <bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="expmpleJob"/>
+        </property>
+
+        <property name="cronExpression">
+            <value>* * * * * ?</value>
+        </property>
+    </bean>
+    <!--    triggers end-->
+
+    <!--    run trigger-->
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+
+        <property name="triggers">
+            <list>
+                <ref bean="cronTrigger"></ref>
+                <ref bean="simpleTrigger"></ref>
+            </list>
+        </property>
+    </bean>
+
+</beans>

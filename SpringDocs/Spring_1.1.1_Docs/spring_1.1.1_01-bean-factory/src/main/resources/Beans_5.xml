@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <bean id="properyLoader" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="studentProperty.properties">
+        </property>
+
+    </bean>
+    <bean id="student" class="com.anurag.propertyresourceconfigurer.Student">
+
+        <property name="name" value="${student-name}"/>
+        <property name="id" value="${student-id}"/>
+    </bean>
+</beans>

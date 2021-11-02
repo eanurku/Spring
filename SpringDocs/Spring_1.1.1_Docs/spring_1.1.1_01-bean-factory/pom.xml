@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.anurag</groupId>
+        <artifactId>Spring_1.1.1_Docs</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.anurag</groupId>
+    <artifactId>spring_1.1.1_01-bean-factory</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>spring_1.1.1_01-bean-factory</name>
+    <url>http://maven.apache.org</url>
+    <properties>
+
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+
+
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+
+    </properties>
+
+
+    <dependencies>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+
+
+        <dependency>
+
+
+            <groupId>org.springframework</groupId>
+
+
+            <artifactId>spring-aop</artifactId>
+
+
+            <version>5.1.9.RELEASE</version>
+
+
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+
+
+        <dependency>
+
+
+            <groupId>org.springframework</groupId>
+
+
+            <artifactId>spring-context</artifactId>
+
+
+            <version>5.1.9.RELEASE</version>
+
+
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+
+
+        <dependency>
+
+
+            <groupId>org.springframework</groupId>
+
+
+            <artifactId>spring-beans</artifactId>
+
+
+            <version>5.1.9.RELEASE</version>
+
+
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+
+
+        <dependency>
+
+
+            <groupId>org.springframework</groupId>
+
+
+            <artifactId>spring-core</artifactId>
+
+
+            <version>5.1.9.RELEASE</version>
+
+
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
+
+
+        <dependency>
+
+
+            <groupId>org.springframework</groupId>
+
+
+            <artifactId>spring-expression</artifactId>
+
+
+            <version>5.1.9.RELEASE</version>
+
+
+        </dependency>
+
+
+    </dependencies>
+</project>
