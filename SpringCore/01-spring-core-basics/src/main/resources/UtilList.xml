@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- add util namespace to use <util:constant/> tag-->
+    <!-- creates a java.util.List instance with values loaded from the supplied 'sourceList' -->
+
+    <bean id="list1" class="org.springframework.beans.factory.config.ListFactoryBean" >
+        <property name="targetListClass" value="java.util.ArrayList"/>
+        <property name="sourceList" >
+            <list >
+                <value>monu</value>
+                <value>jerry</value>
+                <value>john</value>
+            </list>
+        </property>
+    </bean>
+
+    <util:list id="list2">
+        <value>12</value>
+        <value>21</value>
+        <value>43</value>
+    </util:list>
+
+    <bean id="list3" class="org.springframework.beans.factory.config.ListFactoryBean" >
+        <property name="targetListClass" value="java.util.ArrayList"/>
+        <property name="sourceList" >
+            <list >
+                <value>monu</value>
+                <value>jerry</value>
+                <value>john</value>
+            </list>
+        </property>
+    </bean>
+
+    <util:list id="list4" list-class="java.util.LinkedList">
+        <value>12</value>
+        <value>21</value>
+        <value>43</value>
+    </util:list>
+</beans>
+

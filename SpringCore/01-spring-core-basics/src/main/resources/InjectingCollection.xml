@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd "
+>
+
+    <bean id="math" class="com.anurag.injectingcollectioninbean.Subject">
+        <constructor-arg value="Math"/>
+        <constructor-arg value="55"/>
+
+    </bean>
+
+    <bean id="phy" class="com.anurag.injectingcollectioninbean.Subject">
+        <constructor-arg value="Physics"/>
+        <constructor-arg value="65"/>
+
+    </bean>
+
+    <bean id="chem" class="com.anurag.injectingcollectioninbean.Subject">
+        <constructor-arg value="Chemistry"/>
+        <constructor-arg value="75"/>
+
+    </bean>
+
+
+    <bean id="student" class="com.anurag.injectingcollectioninbean.Student">
+        <constructor-arg value="monu"/>
+        <constructor-arg>
+            <list>
+                <ref bean="math"/>
+                <ref bean="phy"/>
+                <ref bean="chem"/>
+            </list>
+        </constructor-arg>
+
+    </bean>
+
+    <!--default constructor required for instantiating this bean-->
+    <bean id="student1" class="com.anurag.injectingcollectioninbean.Student">
+        <property name="sname" value="monu"/>
+
+        <property name="subjects">
+            <list>
+                <ref bean="math"/>
+                <ref bean="phy"/>
+                <ref bean="chem"/>
+            </list>
+        </property>
+
+    </bean>
+
+</beans>

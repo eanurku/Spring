@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="student1" class="com.anurag.beanlifecycle.initanddestroy.Student" scope="singleton" init-method="initialize" destroy-method="clean">
+        <constructor-arg value="13"/>
+        <constructor-arg value="monu"/>
+    </bean>
+
+
+</beans>

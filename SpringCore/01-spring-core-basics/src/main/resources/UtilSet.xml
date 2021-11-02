@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- add util namespace to use <util:constant/> tag-->
+    <!-- creates a java.util.List instance with values loaded from the supplied 'sourceList' -->
+
+    <bean id="set1" class="org.springframework.beans.factory.config.SetFactoryBean">
+        <property name="sourceSet">
+            <set>
+                <value>12</value>
+                <value>123</value>
+                <value>21</value>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="set2" class="org.springframework.beans.factory.config.SetFactoryBean">
+        <property name="targetSetClass" value="java.util.TreeSet"/>
+        <property name="sourceSet">
+            <set>
+                <value>12</value>
+                <value>123</value>
+                <value>21</value>
+            </set>
+        </property>
+    </bean>
+
+    <util:set id="set3">
+        <value>12</value>
+        <value>123</value>
+        <value>21</value>
+    </util:set>
+
+
+
+    <util:set id="set4" set-class="java.util.TreeSet">
+        <value>12</value>
+        <value>123</value>
+        <value>21</value>
+    </util:set>
+
+</beans>
+

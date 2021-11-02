@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- add util namespace to use <util:constant/> tag-->
+
+    <bean id="student1" class="com.anurag.utilschema.referenceenumconstant.Student">
+        <constructor-arg value="Monu"/>
+        <constructor-arg value="131"/>
+        <constructor-arg index="2" value="FullTime">
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="student2" class="com.anurag.utilschema.referenceenumconstant.Student">
+        <constructor-arg value="Monu"/>
+        <constructor-arg value="131"/>
+        <constructor-arg index="2">
+            <util:constant static-field="com.anurag.utilschema.referenceenumconstant.StudentType.FullTime"/>
+        </constructor-arg>
+    </bean>
+</beans>
+

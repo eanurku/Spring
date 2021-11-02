@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd "
+>
+
+    <!--pre loading-->
+    <!--default scope is singleton and singleton will be preloaded by default-->
+    <bean id="preloadedstudent1" class="com.anurag.beanloading.preloading.Student" >
+        <constructor-arg value="monu1"/>
+        <constructor-arg value="32"/>
+
+    </bean>
+    <bean id="preloadedstudent2" class="com.anurag.beanloading.preloading.Student" scope="singleton">
+        <constructor-arg value="monu2"/>
+        <constructor-arg value="32"/>
+
+    </bean>
+    <bean id="preloadedstudent3" class="com.anurag.beanloading.preloading.Student" scope="singleton" lazy-init="false">
+        <constructor-arg value="monu3"/>
+        <constructor-arg value="32"/>
+
+    </bean>
+
+    <!--lazy loading-->
+    <bean id="lazystudent1" class="com.anurag.beanloading.lazyloading.Student" scope="singleton" lazy-init="true">
+        <constructor-arg value="monu4"/>
+        <constructor-arg value="32"/>
+
+    </bean>
+    <bean id="lazystudent2" class="com.anurag.beanloading.lazyloading.Student" scope="prototype">
+        <constructor-arg value="monu5"/>
+        <constructor-arg value="32"/>
+    </bean>
+    <bean id="lazystudent3" class="com.anurag.beanloading.lazyloading.Student" scope="prototype" lazy-init="true">
+        <constructor-arg value="monu6"/>
+        <constructor-arg value="32"/>
+    </bean>
+    <!--prototype scope are lazy loaded always irrespective of lazy-init flag is set or not -->
+    <bean id="lazystudent4" class="com.anurag.beanloading.lazyloading.Student" scope="prototype" lazy-init="false">
+        <constructor-arg value="monu7"/>
+        <constructor-arg value="32"/>
+    </bean>
+
+</beans>

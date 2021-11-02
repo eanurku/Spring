@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- add util namespace to use <util:constant/> tag-->
+    <!-- creates a java.util.List instance with values loaded from the supplied 'sourceList' -->
+
+    <bean id="map1" class="org.springframework.beans.factory.config.MapFactoryBean">
+        <property name="sourceMap">
+            <map>
+                <entry key="key1" value="val1"/>
+                <entry key="key2" value="val2"/>
+                <entry key="key3" value="val3"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="map2" class="org.springframework.beans.factory.config.MapFactoryBean">
+        <property name="targetMapClass" value="java.util.HashMap"/>
+        <property name="sourceMap">
+            <map>
+                <entry key="key1" value="val1"/>
+                <entry key="key2" value="val2"/>
+                <entry key="key3" value="val3"/>
+            </map>
+        </property>
+    </bean>
+
+    <util:map id="map3">
+        <entry key="key1" value="val1"/>
+        <entry key="key2" value="val2"/>
+        <entry key="key3" value="val3"/>
+    </util:map>
+
+    <util:map id="map4" map-class="java.util.TreeMap">
+        <entry key="keyx" value="val1"/>
+        <entry key="keya" value="val2"/>
+        <entry key="keyz" value="val3"/>
+    </util:map>
+
+</beans>
+

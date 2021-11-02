@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- add util namespace to use <util:constant/> tag-->
+
+
+    <bean id="student" class="com.anurag.utilschema.utilpropertyPath.Student">
+        <constructor-arg value="122"/>
+        <constructor-arg value="monu"/>
+        <constructor-arg value="23"/>
+
+    </bean>
+
+    <util:property-path id="studentage" path="student.age"/>
+
+    <bean id="emp" class="com.anurag.utilschema.utilpropertyPath.Employee">
+        <constructor-arg index="0" value="11"/>
+        <constructor-arg ref="studentage"/>
+    </bean>
+
+</beans>
+

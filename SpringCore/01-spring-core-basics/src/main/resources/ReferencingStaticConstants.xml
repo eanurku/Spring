@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--referencing static field-->
+
+    <bean id="student1" class="com.anurag.utilschema.referencestaticconstant.Student">
+        <constructor-arg value="monu"/>
+        <constructor-arg value="132"/>
+        <constructor-arg index="2" ref="isolationfield"/>
+        <constructor-arg index="3" ref="depprefixfield"/>
+    </bean>
+
+    <bean id="isolationfield" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <property name="staticField" value="com.anurag.utilschema.referencestaticconstant.StudentType.SummerIntern"/>
+    </bean>
+    <bean id="depprefixfield" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <property name="staticField" value="com.anurag.utilschema.referencestaticconstant.Department.DepPrefix"/>
+    </bean>
+
+
+    <bean id="student2" class="com.anurag.utilschema.referencestaticconstant.Student">
+        <constructor-arg value="monu"/>
+        <constructor-arg value="132"/>
+        <constructor-arg index="2" ref="com.anurag.utilschema.referencestaticconstant.StudentType.SummerIntern"/>
+        <constructor-arg index="3" >
+        <bean id="com.anurag.utilschema.referencestaticconstant.Department.DepPrefix"
+              class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        </bean>
+        </constructor-arg>
+    </bean>
+
+    <bean id="com.anurag.utilschema.referencestaticconstant.StudentType.SummerIntern"
+          class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean" />
+
+
+
+</beans>
+

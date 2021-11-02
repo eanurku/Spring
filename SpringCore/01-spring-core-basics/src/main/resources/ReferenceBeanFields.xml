@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="student" class="com.anurag.utilschema.referenceBeanFields.Student">
+        <constructor-arg value="12"/>
+        <constructor-arg value="monu"/>
+        <constructor-arg value="24"/>
+
+    </bean>
+
+    <!--PropertyPathFactoryBean use 1-->
+    <bean id="studentage1" class="org.springframework.beans.factory.config.PropertyPathFactoryBean">
+            <property name="targetBeanName" value="student"/>
+            <property name="propertyPath" value="age"/>
+    </bean>
+    <!--PropertyPathFactoryBean use 2-->
+    <bean id="studentage2" class="org.springframework.beans.factory.config.PropertyPathFactoryBean">
+        <property name="targetObject" ref="student"/>
+        <property name="propertyPath" value="age"/>
+    </bean>
+    <!--PropertyPathFactoryBean use 3-->
+    <bean id="student.age" class="org.springframework.beans.factory.config.PropertyPathFactoryBean"/>
+
+    <!--PropertyPathFactoryBean use 4-->
+    <util:property-path id="studentAge" path="student.age"/>
+
+
+    <bean id="emp1" class="com.anurag.utilschema.referenceBeanFields.Employee">
+        <constructor-arg index="0" value="13"/>
+        <constructor-arg index="1" ref="student.age"/>
+    </bean>
+    <bean id="emp2" class="com.anurag.utilschema.referenceBeanFields.Employee">
+        <constructor-arg index="0" value="14"/>
+        <constructor-arg index="1" ref="studentage1"/>
+    </bean>
+    <bean id="emp3" class="com.anurag.utilschema.referenceBeanFields.Employee">
+        <constructor-arg index="0" value="15"/>
+        <constructor-arg index="1" ref="studentage2"/>
+    </bean>
+    <bean id="emp4" class="com.anurag.utilschema.referenceBeanFields.Employee">
+        <constructor-arg index="0" value="15"/>
+        <constructor-arg index="1" ref="studentAge"/>
+    </bean>
+
+</beans>
+
