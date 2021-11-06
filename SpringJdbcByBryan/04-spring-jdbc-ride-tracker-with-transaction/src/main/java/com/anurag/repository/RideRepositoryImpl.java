@@ -24,15 +24,15 @@ public class RideRepositoryImpl implements RideRepository {
     }
 
     @Override
-   // @Transactional
+    @Transactional
     public Ride addRide(Ride ride) {
         jdbcTemplate.update("insert into ride(id,name,description) values(?,?,?)",
                 ride.getId(), ride.getName(), ride.getDescription());
 
         Ride rideinserted = jdbcTemplate.queryForObject("select * from ride where id=?", new Object[]{ride.getId()}, new RideRowMapper());
         System.out.println("inserted ride from DB="+rideinserted);
-        System.out.println("------rolling back DB updates-----------");
+        System.out.println("------rolling back DB updates on occurence of exception in method-----------");
         throw new DataAccessException("DB Error") {};
-        //return jdbcTemplate.queryForObject("select * from ride where id=?", new Object[]{ride.getId()}, new RideRowMapper());
+
     }
 }
