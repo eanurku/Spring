@@ -8,7 +8,7 @@
    -mysql-connector-java
 
 **
-  <parent>
+<parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.2.4.RELEASE</version>
@@ -54,47 +54,4 @@
       </plugin>
     </plugins>
   </build>
-**
-
-2. configure  viewResolver explicitly
-
-**
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
-    @Bean
-    public static InternalResourceViewResolver viewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/jsp/");
-        resolver.setSuffix(".jsp");
-        return resolver;
-    }
-}
-**
-3. implements CommandLineRunner to run code while starting web app
-
-**
-@SpringBootApplication
-@ImportResource("classpath:jdbc-config.xml")
-public class AppStartup extends SpringBootServletInitializer implements CommandLineRunner {
-
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    public static void main(String[] args) {
-        SpringApplication.run(AppStartup.class);
-    }
-
-
-    @Override
-    public void run(String... args) throws Exception {
-
-        System.out.println("running............");
-        jdbcTemplate.update("update employee set firstname=? where employee_id=?",new Object[]{"abc",2});
-    }
-}
-**
-4. import xml config in spring boot web app
--apply this annotation on AppStartup class with @SpringBootApplication at class level.
-**
-   @ImportResource("classpath:jdbc-config.xml")
 **
