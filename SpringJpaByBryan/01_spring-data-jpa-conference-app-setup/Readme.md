@@ -56,4 +56,45 @@
   </build>
 **
 
-2.
+2. configure mysql datasource by using hibernate
+**
+#data source config and logging sql statements
+spring.datasource.username=root
+spring.datasource.password=root1234
+spring.datasource.url=jdbc:mysql://localhost:3306/testdb
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+
+logging.level.org.hibernate.SQL=DEBUG
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=create
+**
+
+3. create model class for mapping to tables 
+-annotation for creating entity class
+ -@Entity 
+ -@Table
+ -@Id
+ -@GeneratedValue
+   
+-sample model class
+
+**
+   @Entity
+   @Table(name = "conf_user")
+   public class User {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String firstname;
+    private String lastname;
+    private int age;
+    ............
+    ..........
+    }
+**
