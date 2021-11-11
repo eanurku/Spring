@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class RegistrationController {
 
@@ -44,11 +46,21 @@ public class RegistrationController {
         return "redirect:index";
     }
 
+    @RequestMapping(value = "/registrations", method = RequestMethod.GET)
+    public @ResponseBody
+    List<Registration> getRegistration() {
+
+        List<Registration> registrations = registrationService.findAll();
+        return registrations;
+    }
+
     @RequestMapping(value = "/registration/{id}",method = RequestMethod.GET)
     public @ResponseBody Registration getRegistration(@PathVariable("id") Long id){
 
         Registration registration=registrationService.getRegistration(id);
         return registration;
     }
+
+
 
 }

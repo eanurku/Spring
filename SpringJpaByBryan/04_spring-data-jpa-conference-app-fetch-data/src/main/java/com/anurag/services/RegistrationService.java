@@ -1,9 +1,13 @@
-package com.anurag.repository;
+package com.anurag.services;
 
 import com.anurag.models.Registration;
 
-public interface RegistrationRepository {
+import java.util.List;
+
+public interface RegistrationService {
     Registration addRegistration(Registration registration);
 
     Registration getRegistration(Long id);
+
+    List<Registration> findAll();
 }
