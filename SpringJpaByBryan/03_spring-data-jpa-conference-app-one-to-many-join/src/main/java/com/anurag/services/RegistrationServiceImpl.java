@@ -15,15 +15,10 @@ public class RegistrationServiceImpl implements RegistrationService {
 
 
     @Override
-//    @Transactional
+    @Transactional
     public Registration addRegistration(Registration registration) {
 
         return registrationRepository.addRegistration(registration);
 
-    }
-
-    @Override
-    public Registration getRegistration(Long id) {
-        return registrationRepository.getRegistration(id);
     }
 }

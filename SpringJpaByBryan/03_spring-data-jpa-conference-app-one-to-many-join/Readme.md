@@ -89,7 +89,6 @@ spring.jpa.hibernate.ddl-auto=create
 
     **
     @OneToMany(mappedBy = "registration")
-    @JsonManagedReference
     private List<Course> courses=new ArrayList<>();
 
     public List<Course> getCourses() {
@@ -104,7 +103,6 @@ spring.jpa.hibernate.ddl-auto=create
 **
 
     @ManyToOne
-    @JsonBackReference
     private Registration registration;
 
     public Registration getRegistration() {
@@ -115,15 +113,4 @@ spring.jpa.hibernate.ddl-auto=create
     }
 
 **
-5. fetch Registration data issue
-issue:
--there is infinite loop of registration and course object due to biderection relationship
-solution:
--use   @JsonManagedReference on Registration class and   @JsonBackReference on course class to make it.
-   
-6. EntityManager find() method to fetch table data
-**
-entityManager.find(Registration.class,id)
-**
-
 

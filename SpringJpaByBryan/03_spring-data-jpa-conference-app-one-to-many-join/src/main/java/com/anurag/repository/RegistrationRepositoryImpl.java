@@ -14,16 +14,10 @@ public class RegistrationRepositoryImpl implements RegistrationRepository {
     EntityManager entityManager;
 
     @Override
-    @Transactional
     public Registration addRegistration(Registration registration) {
 
         entityManager.persist(registration);
 
         return registration;
-    }
-
-    @Override
-    public Registration getRegistration(Long id) {
-        return entityManager.find(Registration.class,id);
     }
 }

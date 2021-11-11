@@ -4,6 +4,4 @@ import com.anurag.models.Registration;
 
 public interface RegistrationRepository {
     Registration addRegistration(Registration registration);
-
-    Registration getRegistration(Long id);
 }

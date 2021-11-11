@@ -44,11 +44,4 @@ public class RegistrationController {
         return "redirect:index";
     }
 
-    @RequestMapping(value = "/registration/{id}",method = RequestMethod.GET)
-    public @ResponseBody Registration getRegistration(@PathVariable("id") Long id){
-
-        Registration registration=registrationService.getRegistration(id);
-        return registration;
-    }
-
 }
