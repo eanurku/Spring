@@ -74,63 +74,16 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=create
 **
 
-3.@GeneratedValue strategy
-- default strategy create hibernate_sequence table and next_id_value column
-- next_id_value will increment by one if used.
--to use mysql auto increment functionality,add IDENTITY strategy.
-** 
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-**
-
-4. oneToMany join type
-
--one to many relation from Registration to courses.
--Registration class code changes
-
-    **
-    @OneToMany(mappedBy = "registration")
-    @JsonManagedReference
-    private List<Course> courses=new ArrayList<>();
-
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
-    }
-    **
--Course class changes
-**
-
-    @ManyToOne
-    @JsonBackReference
-    private Registration registration;
-
-    public Registration getRegistration() {
-    return registration;
-    }
-    public void setRegistration(Registration registration) {
-    this.registration = registration;
-    }
+3. N+1 problem can be solved by joining tables and here is table join through  JPQL query
 
 **
-5. fetch Registration data issue
-issue:
--there is infinite loop of registration and course object due to biderection relationship
-solution:
--use   @JsonManagedReference on Registration class and   @JsonBackReference on course class to make it.
-   
-6. fetch data methods in EntityManager
--find()
-- it uses primary key
-**
-entityManager.find(Registration.class,id)
-**
--createQuery()
-- it uses JPQL query   
-**
-List<Registration> registrations = entityManager.createQuery("select r from Registration r").getResultList();
+   public List<RegistrationReport> findAllReports() {
+        String jpql_query="select  new com.anurag.models.RegistrationReport(r.name,c.name,c.description) " +
+                "from Registration r ,Course c " +
+                "where r.id=c.registration.id ";
+        List<RegistrationReport> reports = entityManager.createQuery(jpql_query).getResultList();
+        return reports;
+   }
 **
 
 
