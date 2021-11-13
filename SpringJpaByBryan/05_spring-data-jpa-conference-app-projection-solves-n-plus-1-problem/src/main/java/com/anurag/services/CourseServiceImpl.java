@@ -17,6 +17,6 @@ public class CourseServiceImpl implements CourseService {
     @Transactional
     public Course addCourse(Course course){
 
-        return courseRepository.addCourse(course);
+        return courseRepository.save(course);
     }
 }

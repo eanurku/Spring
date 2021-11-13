@@ -17,31 +17,16 @@ public class RegistrationController {
     @Autowired
     RegistrationService registrationService;
 
-    @Autowired
-    CourseService courseService;
-
     @RequestMapping(value = "/registration",method = RequestMethod.GET)
     public String displayRegistration(@ModelAttribute("registration") Registration registration){
 
         return "registration";
     }
-    @RequestMapping(value = "/registration",method = RequestMethod.POST)
-    public String submitRegistration(@ModelAttribute("registration") Registration registration){
 
-        System.out.println(registration);
-        registration=registrationService.addRegistration(registration);
-        System.out.println(registration);
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public String submitRegistration(@ModelAttribute("registration") Registration registration) {
 
-
-        Course introCourse=new Course();
-        introCourse.setName("Intro");
-        introCourse.setDescription("this is mandatory intro course");
-
-        introCourse.setRegistration(registration);
-
-        System.out.println(introCourse);
-        introCourse=courseService.addCourse(introCourse);
-        System.out.println(introCourse);
+        registrationService.addRegistration(registration);
 
         return "redirect:index";
     }

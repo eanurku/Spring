@@ -86,7 +86,7 @@ spring.jpa.hibernate.ddl-auto=create
    }
 **
 
-4.named query provides pre-compilationation of queries and a better approach.
+4.named query provides pre-compilation of queries and a better approach.
 -@NamedQueries,@NamedQuery
 -add name query on model class
 **

@@ -6,7 +6,7 @@ import com.anurag.models.RegistrationReport;
 import java.util.List;
 
 public interface RegistrationRepository {
-    Registration addRegistration(Registration registration);
+    Registration save(Registration registration);
 
     Registration getRegistration(Long id);
 

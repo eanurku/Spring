@@ -14,10 +14,11 @@ public class RegistrationRepositoryImpl implements RegistrationRepository {
     EntityManager entityManager;
 
     @Override
-    public Registration addRegistration(Registration registration) {
+    public Registration save(Registration registration) {
 
         entityManager.persist(registration);
 
+        entityManager.flush();
         return registration;
     }
 }

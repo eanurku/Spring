@@ -14,7 +14,7 @@ public class CourseRepositoryImpl implements CourseRepository {
     EntityManager entityManager;
 
     @Override
-    public Course addCourse(Course course){
+    public Course save(Course course){
 
         entityManager.persist(course);
         return course;
