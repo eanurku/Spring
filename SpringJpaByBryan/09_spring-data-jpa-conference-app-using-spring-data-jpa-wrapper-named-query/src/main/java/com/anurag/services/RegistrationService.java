@@ -1,6 +1,7 @@
 package com.anurag.services;
 
 import com.anurag.models.Registration;
+import com.anurag.models.RegistrationReport;
 
 import java.util.List;
 
@@ -10,6 +11,9 @@ public interface RegistrationService {
     Registration getRegistration(Long id);
 
     List<Registration> findAll();
+
+    List<RegistrationReport> findAllReports();
+
 
     Registration updateRegistration(Registration registration);
 }

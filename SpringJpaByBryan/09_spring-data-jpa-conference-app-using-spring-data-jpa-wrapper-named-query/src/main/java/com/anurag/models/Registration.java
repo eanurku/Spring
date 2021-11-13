@@ -8,8 +8,16 @@ import java.util.List;
 
 @Entity
 @Table(name = "REGISTRATION")
+@NamedQueries({
+        @NamedQuery(name = Registration.REGISTRATION_REPORTS,query = Registration.REGISTRATION_REPORTS_JPQL_QUERY)
+
+})
 public class Registration {
 
+    public static final String REGISTRATION_REPORTS="Registration.findAllReports";
+    public static final String REGISTRATION_REPORTS_JPQL_QUERY="select  new com.anurag.models.RegistrationReport(r.name,c.name,c.description) " +
+            "from Registration r ,Course c " +
+            "where r.id=c.registration.id ";
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;

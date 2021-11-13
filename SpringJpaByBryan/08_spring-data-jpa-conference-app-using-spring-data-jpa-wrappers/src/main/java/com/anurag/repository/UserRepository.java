@@ -1,7 +1,10 @@
 package com.anurag.repository;
 
 import com.anurag.models.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository {
-    void addUser(User user);
+@Repository
+public interface UserRepository extends JpaRepository<User,Long> {
+
 }

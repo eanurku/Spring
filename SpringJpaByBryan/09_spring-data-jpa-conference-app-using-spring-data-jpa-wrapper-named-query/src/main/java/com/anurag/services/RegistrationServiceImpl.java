@@ -2,6 +2,7 @@ package com.anurag.services;
 
 import com.anurag.models.Course;
 import com.anurag.models.Registration;
+import com.anurag.models.RegistrationReport;
 import com.anurag.repository.CourseRepository;
 import com.anurag.repository.RegistrationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,11 @@ public class RegistrationServiceImpl implements RegistrationService {
     @Override
     public List<Registration> findAll() {
         return registrationRepository.findAll();
+    }
+
+    @Override
+    public List<RegistrationReport> findAllReports() {
+        return registrationRepository.findAllReports();
     }
 
 

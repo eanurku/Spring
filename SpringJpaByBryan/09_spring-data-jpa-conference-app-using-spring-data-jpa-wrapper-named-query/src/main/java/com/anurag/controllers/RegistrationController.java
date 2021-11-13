@@ -1,6 +1,8 @@
 package com.anurag.controllers;
 
+import com.anurag.models.Course;
 import com.anurag.models.Registration;
+import com.anurag.models.RegistrationReport;
 import com.anurag.services.CourseService;
 import com.anurag.services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,8 @@ public class RegistrationController {
     @Autowired
     CourseService courseService;
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public String displayRegistration(@ModelAttribute("registration") Registration registration) {
+    @RequestMapping(value = "/registration",method = RequestMethod.GET)
+    public String displayRegistration(@ModelAttribute("registration") Registration registration){
 
         return "registration";
     }
@@ -43,19 +45,25 @@ public class RegistrationController {
         return registrations;
     }
 
-    @RequestMapping(value = "/registration/{id}", method = RequestMethod.GET)
-    public @ResponseBody
-    Registration getRegistration(@PathVariable("id") Long id) {
+    @RequestMapping(value = "/registration/{id}",method = RequestMethod.GET)
+    public @ResponseBody Registration getRegistration(@PathVariable("id") Long id){
 
-        Registration registration = registrationService.getRegistration(id);
+        Registration registration=registrationService.getRegistration(id);
         return registration;
     }
 
-    @PostMapping(value = "registrationUpdate")
-    public @ResponseBody
-    Registration updateRegistration(@RequestBody Registration registration) {
 
-        registration = registrationService.updateRegistration(registration);
+    @RequestMapping(value = "/registrationReports",method = RequestMethod.GET)
+    public @ResponseBody List<RegistrationReport> getAllRegistrationReposts(){
+
+        return registrationService.findAllReports();
+
+    }
+
+    @PostMapping(value = "registrationUpdate")
+    public @ResponseBody Registration updateRegistration(@RequestBody Registration registration){
+
+        registration=registrationService.updateRegistration(registration);
 
         return registration;
     }
