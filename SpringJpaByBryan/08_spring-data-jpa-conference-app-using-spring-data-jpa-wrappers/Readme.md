@@ -74,4 +74,12 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=create
 **
 
-3. JpaRepository wrapper
+3. JpaRepository 
+-replace repository implementation class
+-it provides all basic operations on tables with default methods
+-code:
+**
+@Repository("registrationRepository")
+public interface RegistrationRepository extends JpaRepository<Registration,Long> {
+}
+**

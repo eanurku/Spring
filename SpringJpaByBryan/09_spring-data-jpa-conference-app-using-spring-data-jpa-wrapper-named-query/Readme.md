@@ -74,4 +74,33 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=create
 **
 
-3. JpaRepository wrapper
+3. update Registration model class with Named Query name with proper format
+-format is <Domainc class>.<method>
+-name of query "Registration.findAllReports" ,so
+findAllReports() will be method in repository implementation.
+   
+**
+@Entity
+@Table(name = "REGISTRATION")
+@NamedQueries({
+@NamedQuery(name = Registration.REGISTRATION_REPORTS,query = Registration.REGISTRATION_REPORTS_JPQL_QUERY)
+
+})
+public class Registration {
+
+    public static final String REGISTRATION_REPORTS="Registration.findAllReports";
+    public static final String REGISTRATION_REPORTS_JPQL_QUERY="select  new com.anurag.models.RegistrationReport(r.name,c.name,c.description) " +
+            "from Registration r ,Course c " +
+            "where r.id=c.registration.id ";
+}
+**
+
+- add findAllReports() in repository implementation
+
+**
+@Repository
+public interface CourseRepository extends JpaRepository<Course, Long> {
+
+    public List<RegistrationReport> findAllReports();
+}
+**
