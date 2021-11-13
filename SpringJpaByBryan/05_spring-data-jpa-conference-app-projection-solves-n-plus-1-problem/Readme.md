@@ -75,7 +75,7 @@ spring.jpa.hibernate.ddl-auto=create
 **
 
 3. N+1 problem can be solved by joining tables and here is table join through  JPQL query
-
+-createQuery()
 **
    public List<RegistrationReport> findAllReports() {
         String jpql_query="select  new com.anurag.models.RegistrationReport(r.name,c.name,c.description) " +
@@ -85,5 +85,14 @@ spring.jpa.hibernate.ddl-auto=create
         return reports;
    }
 **
-
+- RegistrationReport model class 
+**
+public class RegistrationReport {
+    private String name;
+    private String courseName;
+    private String courseDescription;
+     ----------------
+     ------------------
+}
+**
 

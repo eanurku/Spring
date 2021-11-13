@@ -74,18 +74,4 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=create
 **
 
-3. jpa provides separate methods for insert and update
--persisit() for insert
--merge() for update
--save () method for insert and update will look like below code:
-**
-   public Registration save(Registration registration) {
-      if(registration.getId()==null){
-        entityManager.persist(registration);
-      }
-      else{
-        registration=entityManager.merge(registration);
-      }
-      return registration;
-   }
-**
+3. JpaRepository wrapper

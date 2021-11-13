@@ -1,11 +1,13 @@
-package com.anurag.repository;
+package com.anurag.services;
 
 import com.anurag.models.Registration;
 import com.anurag.models.RegistrationReport;
 
 import java.util.List;
 
-public interface RegistrationRepository {
+public interface RegistrationService {
+    Registration addRegistration(Registration registration);
+
     Registration getRegistration(Long id);
 
     List<Registration> findAll();
@@ -14,5 +16,5 @@ public interface RegistrationRepository {
 
     List<RegistrationReport> findAllReportsByNamedQuery();
 
-    Registration save(Registration registration);
+    Registration updateRegistration(Registration registration);
 }

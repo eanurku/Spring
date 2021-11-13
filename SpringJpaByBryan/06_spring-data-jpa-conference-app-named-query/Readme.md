@@ -74,19 +74,7 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=create
 **
 
-3. N+1 problem can be solved by joining tables and here is table join through  JPQL query
-
-**
-   public List<RegistrationReport> findAllReports() {
-        String jpql_query="select  new com.anurag.models.RegistrationReport(r.name,c.name,c.description) " +
-                "from Registration r ,Course c " +
-                "where r.id=c.registration.id ";
-        List<RegistrationReport> reports = entityManager.createQuery(jpql_query).getResultList();
-        return reports;
-   }
-**
-
-4.named query provides pre-compilation of queries and a better approach.
+3. Named Query provides pre-compilation of queries and a better approach.
 -@NamedQueries,@NamedQuery
 -add name query on model class
 **
@@ -94,10 +82,8 @@ spring.jpa.hibernate.ddl-auto=create
 @Table(name = "REGISTRATION")
 @NamedQueries({
 @NamedQuery(name = Registration.REGISTRATION_REPORTS,query = Registration.REGISTRATION_REPORTS_JPQL_QUERY)
-
 })
 public class Registration {
-
     public static final String REGISTRATION_REPORTS="registrationReports";
     public static final String REGISTRATION_REPORTS_JPQL_QUERY="select  new com.anurag.models.RegistrationReport(r.name,c.name,c.description) " +
             "from Registration r ,Course c " +
@@ -112,8 +98,7 @@ public class Registration {
 @Override
 public List<RegistrationReport> findAllReportsByNamedQuery() {
 List<RegistrationReport> reports = entityManager.createNamedQuery(Registration.REGISTRATION_REPORTS).getResultList();
-
         return reports;
-    }
+}
 ---------
 **
