@@ -1,4 +1,4 @@
-package com.anurag.aop.advices;
+package com.anurag.aop.aspects;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
