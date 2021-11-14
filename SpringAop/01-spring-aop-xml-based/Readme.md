@@ -1,5 +1,5 @@
 1.maven dependencies
--spring-boot-starter-parent 2.5.1
+-spring-boot-starter-parent 2.2.4.RELEASE
 -spring-boot-starter-web
 -spring-boot-starter-test
 -spring-boot-starter-tomcat  provided
@@ -9,7 +9,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.5.1</version>
+    <version>2.2.4.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <properties>
