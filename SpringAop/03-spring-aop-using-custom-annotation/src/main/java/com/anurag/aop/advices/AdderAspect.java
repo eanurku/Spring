@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class AdderAfterReturnAspect {
+public class AdderAspect {
 
     private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
