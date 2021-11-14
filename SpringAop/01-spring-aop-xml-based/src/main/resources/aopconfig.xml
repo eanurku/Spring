@@ -5,11 +5,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!--    this is equivalent to @EnableAspectJAutoProxy and
-    configured by default if using spring boot starter aop in maven dependency-->
-<!--    <aop:aspectj-autoproxy/>-->
-
-
     <bean id="adder" class="com.anurag.businessclasses.SampleAdder"/>
     <bean id="adderAfterReturnAspect" class="com.anurag.aop.advices.AdderAfterReturnAspect"/>
 

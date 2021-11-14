@@ -55,11 +55,16 @@
 **
 2. packaging is war type.
 
-3. enable auto proxy by spring Aop for Annotation based approach on AppStarter class
-   **
-   @EnableAspectJAutoProxy
-   **
--  this is configured by default by spring-boot-starter-aop  dependency
+3. enabling sprin aop support for  AspecJ annotation like @Aspect etc. 
+-in spring xml based App
+**
+   <aop:aspectj-autoproxy/>  
+**   
+- in spring boot pure java config based app 
+  **
+     @EnableAspectJAutoProxy
+  **
+ -this is configured by default by spring-boot-starter-aop dependency 
    
 4. business class (on which methods advice is applied)
 -SampleAdder class add() method will be advised

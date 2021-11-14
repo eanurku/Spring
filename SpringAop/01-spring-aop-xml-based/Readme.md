@@ -70,25 +70,17 @@ public class SampleAdder {
 **
    public class AdderAfterReturnAspect {
 
-   private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+     private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-   public void afterReturn(Object returnValue) {
-   LOGGER.info("here is the return value ={}", returnValue);
+     public void afterReturn(Object returnValue) {
+        LOGGER.info("here is the return value ={}", returnValue);
+
+     }
 
    }
-
-}
 **
-5. enable auto proxy by spring Aop for xml based approach
+5. aop xml configuration
 **
-   <aop:aspectj-autoproxy/>
-**   
--  this is equivalent to @EnableAspectJAutoProxy and configured by default 
-if using spring boot starter aop in maven dependency
-   
-6. aop xml configuration
-**
-   <aop:aspectj-autoproxy/>
    
     <bean id="adder" class="com.anurag.businessclasses.SampleAdder"/>
     <bean id="adderAfterReturnAspect" class="com.anurag.aop.advices.AdderAfterReturnAspect"/>
