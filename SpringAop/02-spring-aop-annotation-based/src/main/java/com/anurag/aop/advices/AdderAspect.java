@@ -16,11 +16,12 @@ public class AdderAspect {
 
 
     @Pointcut("execution(* com.anurag.businessclasses.SampleAdder+.*(..))")
-    public void adderPointcut(){ }
+    public void adderPointcut() {
+    }
 
-    @AfterReturning(pointcut = "adderPointcut()",returning = "returnValue")
+    @AfterReturning(pointcut = "adderPointcut()", returning = "returnValue")
     public void afterReturn(JoinPoint joinpoint, Object returnValue) {
-        LOGGER.info("joinpoint ={}",joinpoint.getSignature().getName());
+        LOGGER.info("joinpoint ={}", joinpoint.getSignature().getName());
         LOGGER.info("afterReturn method return value ={}", returnValue);
     }
 
