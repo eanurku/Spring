@@ -1,89 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-
-    <modelVersion>4.0.0</modelVersion>
-
-
-    <parent>
-
-
-        <groupId>com.anurag</groupId>
-
-
-        <artifactId>Spring</artifactId>
-
-
-        <version>1.0-SNAPSHOT</version>
-
-
-    </parent>
-
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+      
+  <modelVersion>4.0.0</modelVersion>
+      
+  <parent>
+            
     <groupId>com.anurag</groupId>
-
-
-    <artifactId>SpringAop</artifactId>
-
-
+            
+    <artifactId>Spring</artifactId>
+            
     <version>1.0-SNAPSHOT</version>
-
-
-    <packaging>pom</packaging>
-
-
-    <name>SpringAop</name>
-
-
-    <url>http://maven.apache.org</url>
-
-
-    <properties>
-
-
-        <maven.compiler.source>1.8</maven.compiler.source>
-
-
-        <maven.compiler.target>1.8</maven.compiler.target>
-
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-
-    </properties>
-
-
-    <dependencies>
-
-
-        <dependency>
-
-
-            <groupId>junit</groupId>
-
-
-            <artifactId>junit</artifactId>
-
-
-            <version>3.8.1</version>
-
-
-            <scope>test</scope>
-
-
-        </dependency>
-
-
-    </dependencies>
-
-
-    <modules>
-
-
-        <module>01-spring-aop-xml-based</module>
-
-
-    </modules>
-
+        
+  </parent>
+      
+  <groupId>com.anurag</groupId>
+      
+  <artifactId>SpringAop</artifactId>
+      
+  <version>1.0-SNAPSHOT</version>
+      
+  <packaging>pom</packaging>
+      
+  <name>SpringAop</name>
+      
+  <url>http://maven.apache.org</url>
+      
+  <properties>
+            
+    <maven.compiler.source>1.8</maven.compiler.source>
+            
+    <maven.compiler.target>1.8</maven.compiler.target>
+            
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+  </properties>
+      
+  <dependencies>
+            
+    <dependency>
+                  
+      <groupId>junit</groupId>
+                  
+      <artifactId>junit</artifactId>
+                  
+      <version>3.8.1</version>
+                  
+      <scope>test</scope>
+              
+    </dependency>
+        
+  </dependencies>
+      
+  <modules>
+            
+    <module>01-spring-aop-xml-based</module>
+          
+    <module>02-spring-aop-annotation-based</module>
+      
+  </modules>
+  
 </project>
