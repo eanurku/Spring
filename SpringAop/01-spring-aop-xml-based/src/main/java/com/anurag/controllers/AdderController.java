@@ -17,7 +17,7 @@ public class AdderController {
     public @ResponseBody Integer addterTest(@PathVariable("num1") Integer num1,@PathVariable("num2") Integer num2){
 
         Integer result=adder.add(num1,num2);
-        return 0;
+        return result;
     }
 
 }
