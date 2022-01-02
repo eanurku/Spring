@@ -92,7 +92,7 @@ public class WebConfig implements WebMvcConfigurer {
         return new ResponseEntity<>(serviceError, HttpStatus.INTERNAL_SERVER_ERROR);
    }
 **
-6. use @Transational on method performing DB updates
+6. use @Transactional on method performing DB updates
 7. spring boot does autoconfiguration of transationManager 
  -transation manager can be explicitly configured 
 **

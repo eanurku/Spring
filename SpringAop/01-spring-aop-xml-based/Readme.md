@@ -80,6 +80,7 @@ public class SampleAdder {
    }
 **
 5. aop xml configuration
+-load this xml file through @ImportResource(value = "classpath:aopconfig.xml")
 **
    
     <bean id="adder" class="com.anurag.businessclasses.SampleAdder"/>

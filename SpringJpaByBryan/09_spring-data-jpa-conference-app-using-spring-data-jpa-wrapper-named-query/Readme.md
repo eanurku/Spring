@@ -99,7 +99,7 @@ public class Registration {
 
 **
 @Repository
-public interface CourseRepository extends JpaRepository<Course, Long> {
+public interface RegistrationRepository extends JpaRepository<Registration, Long> {
 
     public List<RegistrationReport> findAllReports();
 }
