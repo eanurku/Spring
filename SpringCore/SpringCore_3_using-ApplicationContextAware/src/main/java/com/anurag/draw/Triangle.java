@@ -33,6 +33,6 @@ public class Triangle implements ApplicationContextAware {
         this.applicationContext=applicationContext;
 
         Triangle triangle = (Triangle) this.applicationContext.getBean("triangle");
-        System.out.println(triangle.toString());
+        System.out.println(triangle);
     }
 }

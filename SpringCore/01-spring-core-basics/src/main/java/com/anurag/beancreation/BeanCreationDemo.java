@@ -10,15 +10,15 @@ public class BeanCreationDemo {
         ApplicationContext appcxt1 = new ClassPathXmlApplicationContext("BeanCreation.xml");
         Student studentobj = (Student) appcxt1.getBean("student");
 
-        System.out.println(studentobj.toString());
+        System.out.println(studentobj);
         studentobj.setSname("monu");
         studentobj.setRegno("123");
-        System.out.println(studentobj.toString());
+        System.out.println(studentobj);
 
 
         ApplicationContext appcxt2 = new ClassPathXmlApplicationContext("BeanCreation.xml");
         Student student = appcxt2.getBean("student", Student.class);
-        System.out.println(student.toString());
+        System.out.println(student);
 
 
 

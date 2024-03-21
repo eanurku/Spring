@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.io.ClassPathResource;
 
 @Configuration
 @ComponentScan({ "com.anurag" })
@@ -13,10 +14,12 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 public class AppConfig {
 
 
-    //without this instance also propery loading works
-//    @Bean
-//    public static PropertySourcesPlaceholderConfigurer propertyLoader(){
-//        return new PropertySourcesPlaceholderConfigurer();
-//    }
+    //without this instance also property loading works
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertyLoader(){
+        PropertySourcesPlaceholderConfigurer config = new PropertySourcesPlaceholderConfigurer();
+        config.setLocation(new ClassPathResource("my-app.properties"));
+        return config;
+    }
 
 }

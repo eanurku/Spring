@@ -2,6 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
 
+    <!--    BeanFactoryAware,BeanNameAware usage-->
 
     <bean id="studentbean" class="com.anurag.beanfactoryaware.Student">
         <constructor-arg value="anu"/>
