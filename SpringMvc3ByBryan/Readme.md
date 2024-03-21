@@ -153,3 +153,30 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 - `"redirect:addMoreMinutes"`
 - `"forward:addMoreMinutes"`
 
+7. fixing javax to jakarta package migration issues for deployment on tomcat 10
+    * javax is not supported in tomcat 10
+    * javax is migrated to jakarta in spring 6.x
+    * spring 6.x need jdk17 minimum
+    * fix maven war plugin issue
+   `
+   <build>
+   <pluginManagement>
+   <plugins>
+
+   <plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-compiler-plugin</artifactId>
+   <version>3.11.0</version>
+   </plugin>
+
+   <plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-war-plugin</artifactId>
+   <version>3.3.1</version>
+   </plugin>
+
+      </plugins>
+    </pluginManagement>
+
+    </build>
+    `
