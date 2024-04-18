@@ -23,7 +23,7 @@ public class SpringJdbcDataSourceSetup {
         ResultSet rs = stmt.executeQuery("select * from student");
         while (rs.next()) {
 
-            System.out.println(rs.getString(1)+" "+rs.getBigDecimal(2)+" "+rs.getInt(3));
+            System.out.println(rs.getString("id")+" "+rs.getString("name")+" "+rs.getString("contact"));
 
         }
     }

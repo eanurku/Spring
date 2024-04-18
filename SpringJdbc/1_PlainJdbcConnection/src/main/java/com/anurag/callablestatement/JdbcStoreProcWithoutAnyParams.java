@@ -9,7 +9,7 @@ public class JdbcStoreProcWithoutAnyParams {
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/testdb", "root", "root1234");
 
-            CallableStatement cstmt = conn.prepareCall("call getAccounts()");
+            CallableStatement cstmt = conn.prepareCall("call getaccount()");
             ResultSet rs = cstmt.executeQuery();
 
             while(rs.next()){

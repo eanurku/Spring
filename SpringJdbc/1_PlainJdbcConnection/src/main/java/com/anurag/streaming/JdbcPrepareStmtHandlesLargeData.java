@@ -9,6 +9,7 @@ public class JdbcPrepareStmtHandlesLargeData {
 
 
         String infilepath = JdbcPrepareStmtHandlesLargeData.class.getResource("sampletest.xml").getPath();
+        System.out.println("file path="+infilepath);
         FileInputStream finputstream = new FileInputStream(infilepath);
 
         String outfilepath = JdbcPrepareStmtHandlesLargeData.class.getResource("out.xml").getPath();

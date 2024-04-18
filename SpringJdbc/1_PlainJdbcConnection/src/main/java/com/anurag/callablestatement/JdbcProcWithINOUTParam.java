@@ -9,7 +9,7 @@ public class JdbcProcWithINOUTParam {
 
     public static void main(String[] args) throws SQLException {
 
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "root");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "root1234");
         CallableStatement cstmt = conn.prepareCall("call getfactorial(?)");
 
         cstmt.setInt(1,5);

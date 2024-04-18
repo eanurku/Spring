@@ -55,7 +55,7 @@
 **
 2. packaging is war type.
 
-3. enabling sprin aop support for  AspecJ annotation like @Aspect etc. 
+3. enabling spring aop support for  AspecJ annotation like @Aspect etc. 
 -in spring xml based App
 **
    <aop:aspectj-autoproxy/>  

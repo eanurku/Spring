@@ -5,7 +5,7 @@ import java.sql.*;
 public class JdbcStatementBatchProcessing {
     public static void main(String[] args) throws SQLException {
 
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/testdb", "root", "root");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/testdb", "root", "root1234");
         Statement stmt = conn.createStatement();
 
         conn.setAutoCommit(false);
